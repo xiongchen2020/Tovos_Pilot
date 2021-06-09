@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/set_map"
+    style="@style/tovos_ll_style">
+
+
+    <RelativeLayout
+        android:id="@+id/offlinemap_rl"
+        style="@style/tovos_rl_style">
+
+        <TextView
+           style="@style/leftdialog_tv_style"
+            android:text="导入离线地图包"
+         />
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/tovos_rl_style">
+
+        <TextView
+            style="@style/leftdialog_tv_style"
+            android:text="地图类型:"
+           />
+
+
+
+        <RadioGroup
+            android:background="@color/transparent"
+            android:id="@+id/map_type"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <RadioButton
+                android:id="@+id/map_type_normal"
+                android:text="普通"
+                style="@style/tovos_rb_style"/>
+
+
+            <RadioButton
+                android:id="@+id/map_type_satellite"
+                android:text="卫星"
+                style="@style/tovos_rb_style"/>
+
+
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/tovos_rl_style">
+
+        <Switch
+            android:id="@+id/swith_show_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+        </Switch>
+
+        <TextView
+           style="@style/leftdialog_tv_style"
+            android:text="显示航迹:"
+
+          />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/tovos_rl_style"
+        android:layout_marginBottom="@dimen/set_item_space_small"
+      >
+
+        <Switch
+            android:id="@+id/swith_show_flyzone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+
+
+        <TextView
+           style="@style/leftdialog_tv_style"
+            android:text="显示禁飞区:"
+         >
+
+        </TextView>
+
+    </RelativeLayout>
+</LinearLayout>

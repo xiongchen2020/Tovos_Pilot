@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rl"
+    android:background="@color/transparent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="wrap_content">
+    
+    <RelativeLayout
+        style="@style/tovos_rl_style"
+        android:layout_centerHorizontal="true"
+     >
+
+        <TextView
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/tower_martin_left1"
+            android:id="@+id/tower_nums"
+            style="@style/tovos_tv_style"
+            android:text="序列"/>
+
+        <TextView
+            android:id="@+id/tower_id"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/tower_martin_left2"
+            style="@style/tovos_tv_style"
+            android:text="杆塔编号"
+
+            />
+
+<!--        <TextView-->
+<!--            android:background="@color/transparent"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="@dimen/tower_martin_left3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/tower_type"-->
+<!--            android:text="杆塔类型"-->
+<!--            android:textColor="#ffffffff"-->
+<!--            android:textSize="@dimen/fxjl_text"-->
+<!--            />-->
+
+        <CheckBox
+            android:id="@+id/checked"
+            android:background="@drawable/selector_check"
+            android:button="@null"
+            android:layout_alignParentBottom="true"
+            android:layout_width="9dp"
+            android:layout_height="9dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

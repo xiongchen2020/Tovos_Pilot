@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selected_set_bg_shape"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="航线设置"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:padding="@dimen/set_item_space_small"
+        android:background="@drawable/selected_set_item_shape"
+        android:layout_margin="@dimen/set_item_space_small"/>
+    <com.tovos.uav.sample.route.view.menu.TjKzView
+        android:id="@+id/tj_ll"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/set_item_space_small"
+        android:layout_marginRight="@dimen/set_item_space_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.tovos.uav.sample.route.view.menu.TjKzView>
+    <TextView
+        android:id="@+id/tv_sure"
+        style="@style/tovos_tv_style"
+        android:layout_centerInParent="true"
+        android:layout_gravity="right"
+        android:layout_height="30dp"
+        android:layout_width="80dp"
+        android:gravity="center"
+        android:background="@drawable/selected_set_item_shape"
+        android:text="确定"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"/>
+</LinearLayout>

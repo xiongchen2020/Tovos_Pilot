@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/tovos_ll_style"
+    android:id="@+id/info_set_layout"
+    >
+
+    <RelativeLayout
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_title_height">
+
+        <RelativeLayout
+            android:id="@+id/info_back_rl"
+            android:layout_width="@dimen/set_title_height"
+            android:layout_height="@dimen/set_title_height">
+
+            <ImageView
+                android:layout_marginLeft="14dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/back"
+                />
+
+
+        </RelativeLayout>
+
+        <TextView
+
+            android:layout_centerInParent="true"
+            style="@style/tovos_tv_style"
+            android:text="版本信息"
+
+            />
+
+        <TextView
+            android:id="@+id/info_sure"
+            style="@style/leftdialog_tv_right_style"
+            android:layout_centerVertical="true"
+            android:text="版本更新"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/set_item_space_small"
+        android:background="@drawable/selected_set_item_shape"
+        android:layout_width="@dimen/set_item_width"
+        android:layout_height="@dimen/set_info_height">
+
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/gs_log"
+                android:layout_width="@dimen/info_logo_with"
+                android:layout_height="@dimen/info_logo_height">
+
+            </ImageView>
+
+            <TextView
+                android:layout_marginTop="@dimen/set_item_space_small"
+                android:id="@+id/info_tw"
+                style="@style/tovos_tv_style"
+                android:textSize="@dimen/fxjl_text"
+                android:autoLink="phone"
+              >
+
+            </TextView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_base"
+    style="@style/tovos_rl_style"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="100dp"
+        style="@style/leftdialog_tv_style"
+        android:text="名字"/>
+    <TextView
+        android:id="@+id/level"
+        style="@style/leftdialog_tv_style"
+        android:text="信号"/>
+
+
+</LinearLayout>

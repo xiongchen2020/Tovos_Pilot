@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="@dimen/menu_martin_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/take_off_buttons_layout_martin_top"
+        android:id="@+id/TakeOffReturnPanel"
+        android:layout_width="@dimen/waypoint_button_layout_width"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/waypoint_menu_totop"
+            android:background="@mipmap/menu_icon"
+            android:gravity="center"
+            android:layout_width="@dimen/waypoint_botton_height"
+            android:layout_height="@dimen/waypoint_botton_height">
+
+            <ImageView
+                android:id="@+id/start"
+                android:layout_width="@dimen/waypoint_botton_height"
+                android:layout_height="@dimen/waypoint_botton_height"
+                android:src="@drawable/selector_waypoint_start"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/waypoint_menu_totop2"
+            android:background="@mipmap/menu_icon"
+            android:gravity="center"
+            android:layout_width="@dimen/waypoint_botton_height"
+            android:layout_height="@dimen/waypoint_botton_height">
+
+            <ImageView
+                android:id="@+id/stop"
+                android:layout_width="@dimen/waypoint_botton_height"
+                android:layout_height="@dimen/waypoint_botton_height"
+                android:src="@mipmap/stop" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:background="@mipmap/menu_icon"
+                android:gravity="center"
+                android:layout_width="@dimen/waypoint_botton_height"
+                android:layout_height="@dimen/waypoint_botton_height">
+
+            </LinearLayout>
+
+            <com.tovos.uav.sample.route.custom.CustomTakeOffWidget
+                android:layout_width="@dimen/waypoint_button_layout_width"
+                android:layout_height="@dimen/waypoint_button_layout_width"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="-20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:background="@mipmap/menu_icon"
+                android:gravity="center"
+                android:layout_width="@dimen/waypoint_botton_height"
+                android:layout_height="@dimen/waypoint_botton_height">
+
+            </LinearLayout>
+
+            <com.tovos.uav.sample.route.custom.CustonReturnHomeWidget
+                android:layout_width="@dimen/waypoint_button_layout_width"
+                android:layout_height="@dimen/waypoint_button_layout_width"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/data_laout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/data_item_layout"></include>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

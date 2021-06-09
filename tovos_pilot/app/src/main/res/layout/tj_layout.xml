@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/set_tjkz"
+    android:layout_width="match_parent"
+    style="@style/tovos_ll_style"
+    android:background="@color/transparent">
+
+<!--    <RelativeLayout-->
+<!--        style="@style/tovos_rl_style"-->
+<!--        android:layout_width="match_parent">-->
+
+<!--        <TextView-->
+<!--            style="@style/leftdialog_tv_style"-->
+<!--            android:text="机头模式:"-->
+<!--            >-->
+
+<!--        </TextView>-->
+
+
+<!--        <RadioGroup-->
+<!--            android:background="@color/transparent"-->
+<!--            android:id="@+id/heading_mode_group"-->
+<!--            android:layout_marginRight="16dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/style_1_rb"-->
+<!--                android:text="自动"-->
+<!--                style="@style/tovos_rb_style"-->
+<!--                android:checked="true"-->
+<!--                />-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/style_2_rb"-->
+<!--                android:text="初始航向"-->
+<!--                style="@style/tovos_rb_style"/>-->
+
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/style_3_rb"-->
+<!--                android:text="遥控控制"-->
+<!--                style="@style/tovos_rb_style"/>-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/style_4_rb"-->
+<!--                android:text="指向点"-->
+<!--                style="@style/tovos_rb_style"/>-->
+
+<!--        </RadioGroup>-->
+
+<!--    </RelativeLayout>-->
+
+
+
+    <RelativeLayout
+        android:paddingBottom="@dimen/set_item_space_small"
+        android:layout_marginBottom="@dimen/set_item_space_small"
+        style="@style/tovos_rl_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="@dimen/seekbar_text_martin_top"
+            style="@style/tovos_tv_style"
+            android:text="起飞点速度"
+           />
+
+        <TextView
+            android:id="@+id/xjsd_tx"
+            style="@style/leftdialog_tv_right_style"
+            android:text="150m"
+          />
+        
+        <SeekBar
+            android:id="@+id/xjsd"
+            android:layout_marginTop="@dimen/seekbar_martin_top"
+            android:layout_centerHorizontal="true"
+            android:max="100"
+            android:progress="60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </SeekBar>
+
+        <TextView
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="@dimen/seekbar_text_martin_top2"
+            style="@style/tovos_tv_style"
+            android:text="巡检速度"
+            />
+
+        <TextView
+            android:id="@+id/hdsd_tx"
+            style="@style/leftdialog_tv_right_style"
+            android:layout_marginTop="@dimen/seekbar_text_martin_top2"
+            android:text="150m"
+            />
+
+        <SeekBar
+            android:id="@+id/hdsd"
+            android:layout_marginTop="@dimen/seekbar_martin_top2"
+
+            android:layout_centerHorizontal="true"
+            android:max="100"
+            android:progress="60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </SeekBar>
+        <TextView
+           style="@style/tovos_tv_style"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="@dimen/seekbar_text_martin_top3"
+            android:text="最大巡检速度"
+          />
+
+        <TextView
+            android:id="@+id/fx_sd_tx"
+            style="@style/leftdialog_tv_right_style"
+            android:layout_marginTop="@dimen/seekbar_text_martin_top3"
+            android:text="150m"
+        />
+
+        <SeekBar
+            android:id="@+id/fx_sd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/set_item_space_small"
+            android:layout_marginTop="@dimen/seekbar_martin_top3"
+            android:max="100"
+            android:progress="60">
+
+        </SeekBar>
+
+        <TextView
+           style="@style/tovos_tv_style"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="@dimen/seekbar_text_martin_top4"
+            android:text="起飞点高度"
+           />
+
+        <TextView
+            android:id="@+id/qfd_gd_tx"
+            style="@style/leftdialog_tv_right_style"
+            android:layout_marginTop="@dimen/seekbar_text_martin_top4"
+            android:text="150m"
+           />
+
+        <SeekBar
+            android:id="@+id/qfd_gd"
+            android:layout_marginTop="@dimen/seekbar_martin_top4"
+            android:layout_centerHorizontal="true"
+            android:max="100"
+            android:progress="60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </SeekBar>
+
+    </RelativeLayout>
+
+</LinearLayout>

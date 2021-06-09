@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <supports-screens android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:anyDensity="true" />
+
+    <!-- DJI SDK need these permissions -->
+    <application
+        tools:node="replace"
+        android:name="com.tovos.uav.sample.MApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:screenOrientation="sensorLandscape"
+        android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true"
+        android:networkSecurityConfig="@xml/network_config"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        tools:replace="android:label, android:theme,android:allowBackup,android:icon">
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}"
+            />
+
+        <activity android:name="com.amap.api.maps.offlinemap.OfflineMapActivity"
+            android:screenOrientation="sensorLandscape"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name="com.tovos.uav.sample.medial.MedialDataActivity"
+            android:label="照片"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity"></activity>
+
+        <activity
+            android:name="com.tovos.uav.sample.medial.ImgGalleryActivity"
+            android:label="照片"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity"></activity>
+
+        <activity
+            android:name="com.example.djilib.dji.DJIConnectionControlActivity"
+            android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+                android:resource="@xml/accessory_filter" />
+        </activity>
+
+
+        <activity
+            android:name="com.tovos.uav.sample.route.WayPointActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/FixedActionbarTheme"
+            tools:ignore="LockedOrientationActivity">
+
+        </activity>
+
+        <activity android:name="com.tovos.uav.sample.welecome.WelecomeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity> <!-- AMaps -->
+
+        <activity
+            android:name="com.tovos.uav.sample.playload.PayloadActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name="com.tovos.uav.sample.playload.PayloadSendGetDataActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"
+            tools:ignore="LockedOrientationActivity" />
+
+        <meta-data
+            android:name="com.dji.sdk.API_KEY"
+            android:value="628c8ac9237cbd00b610e319" />
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="18e53add07118fb1a81509d8091530c0" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <uses-library android:name="com.android.future.usb.accessory" />
+    </application>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+</manifest>

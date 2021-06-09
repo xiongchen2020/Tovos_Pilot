@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        style="@style/tovos_rl_style"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="@color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/set_item_height">
+
+                <TextView
+                    android:id="@+id/index"
+                    android:text="序号"
+                    style="@style/leftdialog_tv_style"/>
+
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/name"
+                    android:text="任务名称"
+
+                    android:layout_marginLeft="@dimen/flight_text_martin_left3"
+                    android:layout_toLeftOf="@id/expendable_rl"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    style="@style/tovos_tv_style"/>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/expendable_rl"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="@dimen/set_item_height"
+                    android:layout_height="@dimen/set_item_height">
+
+                    <ImageView
+                        android:id="@+id/expendable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/selector_zk_sq"/>
+
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_detail"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flight_expeded_height">
+
+                <TextView
+                    android:id="@+id/start_time"
+                    android:layout_weight="1"
+                    android:layout_centerVertical="true"
+                    android:text="开始时间:"
+                    android:gravity="center"
+                    style="@style/tovos_tv_style"
+                    android:layout_marginLeft="16dp"
+                 />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/end_time"
+                    android:layout_centerVertical="true"
+                    android:text="结束时间"
+                    android:gravity="center"
+                    android:layout_marginLeft="16dp"
+                    style="@style/tovos_tv_style"/>
+
+
+
+                <TextView
+                    android:id="@+id/lc"
+                    android:layout_weight="1"
+                    android:layout_centerVertical="true"
+                    android:text="里程"
+                    android:gravity="center"
+                    style="@style/tovos_tv_style"
+                    android:layout_marginLeft="16dp"
+                   />
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <CheckBox
+            android:id="@+id/checked"
+            android:background="@drawable/selector_check"
+            android:button="@null"
+            android:layout_alignParentBottom="true"
+            android:layout_width="9dp"
+            android:layout_height="9dp"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

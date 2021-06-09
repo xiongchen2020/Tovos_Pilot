@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/tovos_ll_style"
+    android:id="@+id/x_bz_ll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:ignore="MissingDefaultResource">
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/sx_bz_rl"-->
+<!--        style="@style/tovos_rl_style">-->
+<!--        <Switch-->
+<!--            android:id="@+id/swith_xbz"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true">-->
+
+<!--        </Switch>-->
+<!--        <TextView-->
+<!--            style="@style/leftdialog_tv_style"-->
+<!--            android:text="下避障:"-->
+<!--        >-->
+
+<!--        </TextView>-->
+
+
+
+<!--    </RelativeLayout>-->
+
+
+    <LinearLayout
+        android:id="@+id/xbz_ll"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/set_item_space_small"
+        android:orientation="vertical"
+        android:background="@color/transparent"
+        android:layout_width="@dimen/set_item_width"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              style="@style/tovos_tv_style"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                android:text="下避障安全距离"
+              />
+
+            <TextView
+                android:id="@+id/xbzaqjl_tx"
+               style="@style/leftdialog_tv_right_style"
+                android:text="5m"
+              />
+
+            <SeekBar
+                android:id="@+id/xbzaqjl_sd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/seekbar_martin_top"
+                android:max="3"
+                android:min="1"
+                android:progress="5"/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+               style="@style/tovos_tv_style"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                android:text="下警告距离"
+              />
+
+            <TextView
+                android:id="@+id/xjgjl_tx"
+                style="@style/leftdialog_tv_right_style"
+                android:text="5m"
+               />
+
+            <SeekBar
+                android:layout_marginBottom="@dimen/set_item_space_small"
+                android:id="@+id/xjgjl_sd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/seekbar_martin_top"
+                android:max="45"
+                android:min="5"
+                android:progress="5">
+
+            </SeekBar>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

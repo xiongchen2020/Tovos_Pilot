@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/tovos_ll_style"
+    android:id="@+id/rtk_set_layout"
+   >
+
+    <RelativeLayout
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_title_height">
+
+        <RelativeLayout
+            android:id="@+id/rtk_back_rl"
+            android:layout_width="@dimen/set_title_height"
+            android:layout_height="@dimen/set_title_height">
+
+            <ImageView
+                android:layout_marginLeft="14dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/back"
+                />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_centerInParent="true"
+            style="@style/tovos_tv_style"
+            android:text="RTK设置"/>
+
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+       style="@style/tovos_rl_style">
+
+        <TextView
+            style="@style/leftdialog_tv_style"
+            android:text="通道:"
+        />
+
+
+
+        <RadioGroup
+            android:id="@+id/rtk_group"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/atuo_rb"
+                android:text="内置账号"
+                style="@style/tovos_rb_style"/>
+            <RadioButton
+                android:id="@+id/custom_rb"
+                android:text="自定义"
+                android:checked="true"
+                style="@style/tovos_rb_style"/>
+
+            <RadioButton
+                android:id="@+id/base_rb"
+                android:text="D-RTK"
+                style="@style/tovos_rb_style"/>
+
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/tovos_rl_style">
+
+        <TextView
+           style="@style/leftdialog_tv_style"
+            android:text="状态:"
+           />
+
+
+        <TextView
+            style="@style/rtkset_right_style"
+            android:text="未连接"
+            android:id="@+id/rtk_status"
+           />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/custom_rtk_ll"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/custom_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="地址:"
+                    />
+
+                <EditText
+                    style="@style/rtkset_right_style"
+                    android:id="@+id/rtk_addr"
+                   >
+
+                </EditText>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="端口:"
+                    />
+
+                <EditText
+                    android:id="@+id/rtk_psot"
+                    style="@style/rtkset_right_style"
+                    android:digits="1234567890"
+                    android:text=""></EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="挂载点:"
+                    />
+
+                <EditText
+                    android:id="@+id/rtk_gzd"
+                    style="@style/rtkset_right_style"></EditText>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="用户名:"/>
+
+                <EditText
+                    style="@style/rtkset_right_style"
+                    android:id="@+id/rtk_user"
+                  ></EditText>
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                style="@style/tovos_rl_style">
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="密码:"/>
+
+                <EditText
+                    style="@style/rtkset_right_style"
+                    android:id="@+id/rtk_pwd"
+                    android:inputType="textPassword"
+                  ></EditText>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+           android:visibility="gone"
+            android:id="@+id/nzzh_ll"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="内置账号:"
+            >
+
+                </TextView>
+
+
+                <RadioGroup
+                    android:id="@+id/rtk_in_nzzj"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/a_rb"
+                        android:text="A"
+                        android:textSize="@dimen/fxjl_text"
+                        android:textColor="#FFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/b_rb"
+                        android:text="B"
+                        android:checked="true"
+                        android:textSize="@dimen/fxjl_text"
+                        android:textColor="#FFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </RadioButton>
+
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="激活时间:"
+                 >
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/jh_time"
+                   style="@style/leftdialog_tv_right_style"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                  >
+
+                </TextView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/jh_ll_activie"
+                style="@style/tovos_rl_style">
+
+                <TextView
+                   style="@style/leftdialog_tv_style"
+                    android:text="激活账号:"
+              />
+
+
+
+
+                <TextView
+                    android:id="@+id/end_time"
+                  style="@style/leftdialog_tv_right_style"
+                    android:layout_centerVertical="true"
+                    android:text="确定"
+                   />
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <TextView
+                   style="@style/leftdialog_tv_style"
+                    android:text="RTK坐标系:"
+                />
+
+
+
+
+                <RadioGroup
+                    android:id="@+id/rtk_zbx_group"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/wgs84_rb"
+                        android:text="WGS84"
+                        android:textSize="@dimen/fxjl_text"
+                        android:textColor="#FFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/c2000_rb"
+                        android:text="C2000"
+                        android:checked="true"
+                        android:textSize="@dimen/fxjl_text"
+                        android:textColor="#FFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </RadioButton>
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/set_item_space_small"
+            android:id="@+id/rtk_sure"
+            style="@style/tovos_rl_style">
+
+            <TextView
+
+                style="@style/leftdialog_tv_style"
+                android:layout_centerInParent="true"
+                android:text="设  置"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/base_rtk_ll"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            style="@style/tovos_rl_style">
+
+            <Button
+                android:id="@+id/button_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="开始"
+                android:textSize="@dimen/fxjl_text">
+
+            </Button>
+
+            <TextView
+                style="@style/leftdialog_tv_style"
+                android:text="搜索基站:">
+
+            </TextView>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/selected_set_item_shape"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/set_item_space_small"
+            android:layout_height="wrap_content">
+        <TextView
+            style="@style/base_style"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="11dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="基站列表"
+         />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/base_list"
+
+            android:layout_marginBottom="@dimen/set_item_space_small"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/set_flightcontrol"
+    style="@style/tovos_ll_style">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_title_height"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/flightcontrol_rl"
+            android:layout_width="@dimen/set_title_height"
+            android:layout_height="@dimen/set_title_height">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/back" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            style="@style/tovos_tv_style"
+            android:layout_centerInParent="true"
+            android:text="飞控参数设置"
+
+            />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+               style="@style/tovos_rl_style">
+
+                <CheckBox
+                    android:id="@+id/swith_flight_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="false">
+
+                </CheckBox>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="允许切换飞行模式:">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <CheckBox
+                    android:id="@+id/limit_gl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="false">
+
+                </CheckBox>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="限制距离:">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <RadioGroup
+                    android:id="@+id/sk_xw_rg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/transparent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/sk_xw_rb1"
+                       style="@style/tovos_rb_style"
+                        android:checked="true"
+                        android:text="悬停"
+                     />
+
+
+
+                    <RadioButton
+                        android:id="@+id/sk_xw_rb2"
+                        style="@style/tovos_rb_style"
+                        android:text="下降"
+                       />
+
+
+                    <RadioButton
+                        android:id="@+id/sk_xw_rb3"
+                        style="@style/tovos_rb_style"
+                        android:text="返航"
+                       />
+
+
+                </RadioGroup>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="失控行为:">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <Button
+                    android:id="@+id/button_jzzx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="校准"
+                    android:textSize="@dimen/fxjl_text">
+
+                </Button>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="重心自动校准:">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                style="@style/tovos_rl_style">
+
+                <RelativeLayout
+                    android:id="@+id/fxgl_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent">
+
+                    <SeekBar
+                        android:id="@+id/fx_jx"
+                        android:layout_width="@dimen/set_layout_width"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/seekbar_martin_top"
+                        android:max="100"
+                        android:progress="60">
+
+                    </SeekBar>
+
+                    <TextView
+                        android:id="@+id/fx_jx_tx"
+                        style="@style/leftdialog_tv_right_style"
+                        android:text="150m"></TextView>
+
+                    <TextView
+                        style="@style/tovos_tv_style"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                        android:text="飞行距离"></TextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fhgd_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fxgl_rl"
+                    android:background="@color/transparent">
+
+                    <SeekBar
+                        android:id="@+id/fh_gd"
+                        android:layout_width="@dimen/set_layout_width"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/seekbar_martin_top"
+                        android:max="100"
+                        android:progress="60">
+
+                    </SeekBar>
+
+                    <TextView
+                        android:id="@+id/fh_gd_tx"
+                        style="@style/leftdialog_tv_right_style"
+                        android:text="150m"></TextView>
+
+                    <TextView
+                        style="@style/tovos_tv_style"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                        android:text="返航高度"></TextView>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sensor_ll"
+                style="@style/tovos_rl_style"
+                android:layout_marginBottom="@dimen/set_item_space_small"
+               >
+
+                <ImageView
+                    android:id="@+id/iv_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12.3dp"
+                    android:src="@drawable/selector_zk_sq">
+
+                </ImageView>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="传感器状态">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <include layout="@layout/sensors_layout"></include>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

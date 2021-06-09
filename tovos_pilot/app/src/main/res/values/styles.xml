@@ -1,0 +1,130 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:background">@color/background_blue</item>
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:textColorPrimary">@color/medium_blue</item>
+        <item name="android:textColorSecondary">@color/light_gray</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="FixedActionbarTheme" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:actionBarSize">@dimen/action_height</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:actionBarStyle">@style/MyActionBarStyle</item>
+
+    </style>
+    
+
+    <style name="MyActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar" >
+        <item name="android:background">@color/pad_actionbar_bg</item><!--背景色-->
+        <item name="android:titleTextStyle">@style/AcBar_titleStyle</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingLeft">1dp</item>
+
+    </style>
+    <style name="AcBar_titleStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@drawable/common_text_color</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/round_btn</item>
+    </style>
+
+    <style name="test_text">
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">6</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="base_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">@dimen/fxjl_text</item>
+
+
+
+    </style>
+    <style name="tovos_rb_style" parent="base_style">
+
+    </style>
+
+   <!--侧边栏按钮style-->
+    <style name="radiobutton_style">
+        <item name="android:paddingTop">@dimen/paddingtop</item>
+        <item name="android:paddingBottom">@dimen/paddingbuttom</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/selector_set_item2</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/fxjl_text</item>
+        <item name="android:layout_width">@dimen/menu_width</item>
+        <item name="android:layout_height">@dimen/menu_height</item>
+    </style>
+
+    <style name="tovos_tv_style" parent="base_style">
+
+    </style>
+
+    <!--侧边栏弹出框text style-->
+    <style name="leftdialog_tv_style" parent="tovos_tv_style">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">11dp</item>
+    </style>
+
+
+    <style name="leftdialog_tv_right_style" parent="tovos_tv_style">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginTop">@dimen/seekbar_text_martin_top</item>
+        <item name="android:layout_marginRight">11dp</item>
+    </style>
+
+
+    <style name="rtkset_right_style">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:gravity">end</item>
+        <item name="android:layout_marginLeft">60dp</item>
+        <item name="android:textSize">@dimen/fxjl_text</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tovos_ll_style">
+        <item name="android:layout_width">@dimen/set_layout_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@drawable/selected_set_bg_shape</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:shadowColor">#80000000</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
+
+    <style name="tovos_rl_style">
+        <item name="android:background">@drawable/selected_set_item_shape</item>
+        <item name="android:layout_width">@dimen/set_item_width</item>
+        <item name="android:layout_height">@dimen/set_item_height</item>
+        <item name="android:layout_marginTop">@dimen/set_item_space_small</item>
+
+    </style>
+</resources>

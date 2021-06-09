@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sensor_status"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/sensors_rb"
+        android:background="@drawable/selected_set_item_shape"
+        android:layout_width="@dimen/set_item_width"
+        android:layout_height="@dimen/set_item_height"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/imu_rb"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fxjl_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_set_item"
+            android:text="IMU"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/compass_rb"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fxjl_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_set_item"
+            android:text="指南针"></RadioButton>
+
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/flight_sensors"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="@dimen/set_item_heightall">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/check_rl"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="0dp"
+        style="@style/tovos_rl_style">
+
+        <TextView
+            style="@style/tovos_tv_style"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="11dp"
+            android:text="校准"
+            >
+
+        </TextView>
+
+    </RelativeLayout>
+
+</LinearLayout>

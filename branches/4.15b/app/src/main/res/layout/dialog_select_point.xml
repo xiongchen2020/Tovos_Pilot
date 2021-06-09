@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/set_item_width"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selected_set_bg_shape"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择起飞点"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:padding="@dimen/set_item_space_small"
+        android:background="@drawable/selected_set_item_shape"
+        android:layout_margin="@dimen/set_item_space_small"/>
+ <androidx.recyclerview.widget.RecyclerView
+     android:id="@+id/point_list"
+     android:layout_width="match_parent"
+     android:layout_height="150dp"
+     />
+    <TextView
+        android:id="@+id/tv_cancel"
+        style="@style/tovos_tv_style"
+        android:layout_centerInParent="true"
+        android:layout_gravity="right"
+        android:layout_height="30dp"
+        android:layout_width="80dp"
+        android:gravity="center"
+        android:background="@drawable/selected_set_item_shape"
+        android:text="取消"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"/>
+
+</LinearLayout>

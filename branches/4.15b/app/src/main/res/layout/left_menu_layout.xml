@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/transparent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:background="#0A2139"
+        android:layout_width="@dimen/menu_layout_width"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:scrollbars="none"
+            android:layout_width="@dimen/menu_layout_width"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:id="@+id/waypoint_rg"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_flight"
+                    style="@style/radiobutton_style"
+                    android:text="飞行记录"
+                    android:drawableTop="@mipmap/flight_record"
+                 />
+
+                <RadioButton
+                    android:id="@+id/rb_task"
+                    style="@style/radiobutton_style"
+                    android:text="任务管理"
+                    android:drawableTop="@mipmap/task"
+                  />
+
+
+
+                <RadioButton
+
+                    android:id="@+id/rb_map"
+                    style="@style/radiobutton_style"
+                    android:text="地图"
+                    android:drawableTop="@mipmap/map"
+                  />
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/rb_tj"-->
+<!--                    style="@style/radiobutton_style"-->
+<!--                    android:text="控制调节"-->
+<!--                    android:drawableTop="@mipmap/tj"-->
+<!--                   />-->
+
+                <RadioButton
+                    android:id="@+id/rt_set"
+                    style="@style/radiobutton_style"
+                    android:text="设置"
+                    android:drawableTop="@mipmap/set"
+                  />
+
+                <RadioButton
+                    android:visibility="gone"
+                    android:id="@+id/rt_palyload"
+                    style="@style/radiobutton_style"
+                    android:text="palyload"
+                    android:drawableTop="@mipmap/set"
+                  />
+
+                <RadioButton
+                    android:visibility="gone"
+                    android:id="@+id/rt_flighthub"
+                    style="@style/radiobutton_style"
+                    android:text="司空"
+                    android:drawableTop="@mipmap/home"
+                  />
+
+
+
+            </RadioGroup>
+
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/set_ll"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--设置列表-->
+            <include layout="@layout/set_layout"></include>
+            <!--飞控设置-->
+            <com.tovos.uav.sample.route.view.set.FlightControlView
+                android:id="@+id/flightcontrolview"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.tovos.uav.sample.route.view.set.FlightControlView>
+            <!--传感器设置-->
+            <com.tovos.uav.sample.route.view.set.VisionSetView
+                android:id="@+id/vissionSetView"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.tovos.uav.sample.route.view.set.VisionSetView>
+
+            <!--遥控器设置-->
+            <com.tovos.uav.sample.route.view.set.RemoteControlView
+                android:id="@+id/remoteControlView"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.tovos.uav.sample.route.view.set.RemoteControlView>
+            <!--电池设置-->
+            <com.tovos.uav.sample.route.view.set.BatterySetView
+                android:id="@+id/battery_set_view"
+                android:visibility="gone"
+                android:layout_width="@dimen/set_layout_width"
+                android:layout_height="wrap_content">
+
+            </com.tovos.uav.sample.route.view.set.BatterySetView>
+            <com.tovos.uav.sample.route.view.set.GimbalSetView
+                android:id="@+id/gimbal_set_view"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--rtk设置-->
+            <com.tovos.uav.sample.route.view.set.RTKView
+                android:id="@+id/rtkview"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.tovos.uav.sample.route.view.set.RTKView>
+            <!--服务器设置-->
+            <com.tovos.uav.sample.route.view.set.ServerView
+                android:id="@+id/serverview"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.tovos.uav.sample.route.view.set.ServerView>
+            <!--版本信息-->
+            <com.tovos.uav.sample.route.view.set.InfoView
+                android:id="@+id/infoview"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.tovos.uav.sample.route.view.set.InfoView>
+
+
+        </LinearLayout>
+
+<!--        <com.tovos.uav.sample.route.view.menu.TjKzView-->
+<!--            android:id="@+id/tj_ll"-->
+<!--            android:visibility="gone"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--        </com.tovos.uav.sample.route.view.menu.TjKzView>-->
+
+        <com.tovos.uav.sample.route.view.menu.FlightRecordView
+            android:id="@+id/tj_flight_record"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.tovos.uav.sample.route.view.menu.FlightRecordView>
+
+
+        <com.tovos.uav.sample.route.view.menu.TaskView
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/set_item_space_small"
+            android:layout_alignParentTop="true"
+            android:id="@+id/task_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.tovos.uav.sample.route.view.menu.TaskView>
+
+        <com.tovos.uav.sample.route.view.menu.MapSetView
+            android:id="@+id/map_ll"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </com.tovos.uav.sample.route.view.menu.MapSetView>
+
+        <com.example.filgthhublibrary.view.FlightHubView
+            android:visibility="gone"
+            android:id="@+id/hub_ll"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.example.filgthhublibrary.view.FlightHubView>
+
+    </RelativeLayout>
+
+</LinearLayout>

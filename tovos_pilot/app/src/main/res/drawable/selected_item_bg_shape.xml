@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--填充颜色-->
+    <solid android:color="#103154" />
+
+    <item name="android:shadowColor"
+        tools:ignore="MissingPrefix">#80000000</item>
+    <item name="android:shadowDx"
+        tools:ignore="MissingPrefix">0</item>
+    <item name="android:shadowDy"
+        tools:ignore="MissingPrefix">1</item>
+</shape>

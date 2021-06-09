@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/tovos_ll_style">
+    
+    <RelativeLayout
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_title_height">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="序号"
+            style="@style/tovos_tv_style"
+            android:layout_marginLeft="@dimen/flight_text_martin_left1"
+           >
+
+        </TextView>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="任务名称"
+            android:gravity="center"
+            style="@style/tovos_tv_style"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="74dp"
+            android:layout_marginRight="42dp"
+        >
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flight_list_layout_height">
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/flight_pg"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+        </ProgressBar>
+
+        <RelativeLayout
+            android:id="@+id/flight_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/flight_list_layout_height">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/task_list"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_above="@id/flight_record_edit_ll"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:visibility="visible"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/flight_record_edit_ll"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="@dimen/set_item_space_small"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/set_item_height"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/flight_all_selected"
+                    android:background="@drawable/selected_set_item_shape"
+                    android:layout_width="@dimen/flight_button_width"
+                    android:layout_height="@dimen/set_item_height">
+
+                    <TextView
+                        android:textColor="#6DB5FF"
+                        style="@style/tovos_tv_style"
+                        android:layout_marginLeft="11dp"
+                        android:layout_centerInParent="true"
+                        android:text="全选"
+                       />
+
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/flight_all_dele"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/selected_set_item_shape"
+                    android:layout_width="@dimen/flight_button_width"
+                    android:layout_height="@dimen/set_item_height">
+
+                    <TextView
+                        android:textColor="#FF0000"
+                        style="@style/tovos_tv_style"
+                        android:layout_marginLeft="11dp"
+                        android:layout_centerInParent="true"
+                        android:text="删除"
+                      />
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/selected_set_item_shape"
+        android:gravity="center_vertical"
+        android:layout_width="@dimen/set_layout_width"
+        android:layout_marginBottom="@dimen/set_item_space_small"
+        android:layout_marginTop="@dimen/set_item_space_small"
+        android:layout_height="@dimen/flight_text_layout_height">
+        
+        <TextView
+            android:id="@+id/flight_all_lc"
+            android:gravity="center"
+            android:textColor="#ff6db5ff"
+            android:textSize="@dimen/fxjl_text"
+            android:text="飞行总里程 153km"
+            android:layout_marginLeft="@dimen/flight_text_martin_left1"
+            android:layout_width="@dimen/flight_text_width"
+            android:layout_height="@dimen/flight_text_height"/>
+
+
+        <TextView
+            android:id="@+id/flight_all_nums"
+            android:gravity="center"
+            android:textColor="#ff6db5ff"
+            android:textSize="@dimen/fxjl_text"
+            android:text="总飞行架次 34架次"
+            android:layout_marginLeft="@dimen/flight_text_martin_left2"
+            android:layout_width="@dimen/flight_text_width"
+            android:layout_height="@dimen/flight_text_height"/>
+
+
+        <TextView
+            android:id="@+id/flight_all_times"
+            android:gravity="center"
+            android:textColor="#ff6db5ff"
+            android:textSize="@dimen/fxjl_text"
+            android:text="总飞行时间 38时34分7秒"
+            android:layout_marginLeft="@dimen/flight_text_martin_left3"
+            android:layout_width="@dimen/flight_text_width"
+            android:layout_height="@dimen/flight_text_height"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

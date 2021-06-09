@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/transparent"
+    android:id="@+id/item"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:background="@drawable/waypoint_shape"
+        android:id="@+id/item1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_photo_mode_raw_burst_10"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"></ImageView>
+
+                <TextView
+                    android:background="@color/transparent"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/centerpoint_green"
+                    android:text="航线导入"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/item2"
+        android:background="@drawable/waypoint_shape"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:background="@color/transparent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ImageView>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/transparent"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:background="@color/transparent"
+                android:id="@+id/name"
+                android:text="航线名称"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:background="@color/transparent"
+                android:layout_margin="10dp"
+                android:id="@+id/date"
+                android:text="航线日期"
+                android:textColor="@color/centerpoint_green"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:background="@color/transparent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/addr"
+                android:text="航线地址"
+                android:textColor="@color/centerpoint_green"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

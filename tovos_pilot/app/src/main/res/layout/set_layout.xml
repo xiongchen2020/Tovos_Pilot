@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/tovos_ll_style"
+    android:id="@+id/set_main"
+  >
+
+    <RelativeLayout
+        android:id="@+id/flight_cont"
+        style="@style/tovos_rl_style">
+
+        <TextView
+            style="@style/leftdialog_tv_style"
+            android:text="飞控参数"
+        >
+
+        </TextView>
+
+        <ImageView
+            android:src="@mipmap/next"
+            android:layout_marginRight="12.3dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/vission_set"
+        style="@style/tovos_rl_style">
+
+        <TextView
+            style="@style/leftdialog_tv_style"
+            android:text="传感器设置"
+           >
+
+        </TextView>
+
+        <ImageView
+            android:src="@mipmap/next"
+            android:layout_marginRight="12.3dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/remote_set"
+        style="@style/tovos_rl_style">
+
+        <TextView
+            style="@style/leftdialog_tv_style"
+            android:text="遥控器设置"
+          >
+
+        </TextView>
+
+        <ImageView
+            android:src="@mipmap/next"
+            android:layout_marginRight="12.3dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/battery_set"
+        style="@style/tovos_rl_style">
+
+        <TextView
+
+            style="@style/leftdialog_tv_style"
+            android:text="电池设置"
+           >
+
+        </TextView>
+
+        <ImageView
+            android:src="@mipmap/next"
+            android:layout_marginRight="12.3dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gimbal_set"
+        style="@style/tovos_rl_style">
+
+        <TextView
+            style="@style/leftdialog_tv_style"
+            android:text="云台设置"
+           >
+
+        </TextView>
+
+        <ImageView
+            android:src="@mipmap/next"
+            android:layout_marginRight="12.3dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rtk_rk"
+        style="@style/tovos_rl_style">
+
+        <TextView
+            style="@style/leftdialog_tv_style"
+            android:text="网络RTK"
+          >
+
+        </TextView>
+        
+        <ImageView
+            android:src="@mipmap/next"
+            android:layout_marginRight="12.3dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ip_rk"
+        style="@style/tovos_rl_style">
+
+        <TextView
+            style="@style/leftdialog_tv_style"
+            android:text="服务器设置"
+          >
+
+        </TextView>
+
+        <ImageView
+            android:src="@mipmap/next"
+            android:layout_marginRight="12.3dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/check"
+        style="@style/tovos_rl_style">
+
+        <TextView
+            style="@style/leftdialog_tv_style"
+            android:text="检查更新"
+           >
+
+        </TextView>
+
+        <ImageView
+            android:src="@mipmap/next"
+            android:layout_marginRight="12.3dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/info_rl"
+        android:layout_marginBottom="@dimen/set_item_space_small"
+        style="@style/tovos_rl_style">
+
+        <TextView
+            style="@style/leftdialog_tv_style"
+            android:text="版本信息"
+          >
+
+        </TextView>
+
+        <ImageView
+            android:src="@mipmap/next"
+            android:layout_marginRight="12.3dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

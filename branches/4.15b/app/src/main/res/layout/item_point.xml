@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_point"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/set_item_height"
+    android:layout_margin="@dimen/set_item_space_small"
+    android:background="@drawable/selected_set_item_shape"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/index"
+        style="@style/leftdialog_tv_style"
+        android:layout_width="100dp"
+        android:text="索引" />
+    <TextView
+        android:id="@+id/name"
+        style="@style/leftdialog_tv_style"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="" />
+
+
+</LinearLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:id="@+id/sx_bz_ll"
+    android:visibility="gone"
+    android:layout_marginBottom="@dimen/set_item_space_small"
+    android:background="@drawable/selected_set_item_shape"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/sx_bz_rl"
+        style="@style/tovos_rl_style">
+
+        <Switch
+            android:id="@+id/swith_sbz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+        </Switch>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:text="上/下避障:"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/fxjl_text">
+
+        </TextView>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/sbz_sz"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/set_item_space_small"
+        android:orientation="vertical"
+        android:background="@color/transparent"
+        android:layout_width="@dimen/set_item_width"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/fxjl_text"
+                android:text="上避障安全距离"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <TextView
+                android:id="@+id/sbzaqjl_tx"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="11dp"
+                android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/fxjl_text"
+                android:text="10m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <SeekBar
+                android:id="@+id/sbzaqjl"
+                android:layout_marginTop="@dimen/seekbar_martin_top"
+                android:layout_centerHorizontal="true"
+                android:max="10"
+                android:min="1"
+                android:progress="1"
+                android:layout_width="@dimen/set_seekbar_width"
+                android:layout_height="wrap_content">
+
+            </SeekBar>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                android:text="上警告距离"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/fxjl_text"></TextView>
+
+            <TextView
+                android:id="@+id/sjgjl_tx"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="11dp"
+                android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/fxjl_text"
+                android:text="5m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <SeekBar
+                android:id="@+id/sjgjl_sd"
+                android:layout_width="@dimen/set_seekbar_width"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/seekbar_martin_top"
+                android:max="45"
+                android:min="5"
+                android:progress="5">
+
+            </SeekBar>
+        </RelativeLayout>
+
+        <include layout = "@layout/x_bz_layout"></include>
+
+    </LinearLayout>
+
+
+</LinearLayout>

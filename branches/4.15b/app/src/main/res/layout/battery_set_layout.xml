@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/set_battery"
+    style="@style/tovos_ll_style">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_title_height"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/battery_rl"
+            android:layout_width="@dimen/set_title_height"
+            android:layout_height="@dimen/set_title_height">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/back" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            style="@style/tovos_tv_style"
+            android:layout_centerInParent="true"
+            android:text="电池设置" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+
+            <RelativeLayout
+                android:id="@+id/serious_lowbattery_rl"
+                style="@style/tovos_rl_style"
+                android:layout_height="wrap_content">
+
+                <SeekBar
+                    android:id="@+id/bar_slb"
+                    android:layout_width="@dimen/set_layout_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/seekbar_martin_top"
+                    android:max="100"
+                    android:progress="100">
+
+                </SeekBar>
+
+                <TextView
+                    android:id="@+id/tv_slb"
+                    style="@style/leftdialog_tv_right_style"
+                    android:text="45%"></TextView>
+
+                <TextView
+                    android:layout_marginLeft="11dp"
+                    style="@style/tovos_tv_style"
+                    android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                    android:text="严重低电量报警"
+                  ></TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/low_battery_rl"
+                style="@style/tovos_rl_style"
+                android:layout_height="wrap_content">
+
+                <SeekBar
+                    android:id="@+id/bar_lb"
+                    android:layout_width="@dimen/set_layout_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/seekbar_martin_top"
+                    android:max="100"
+                    android:progress="100">
+
+                </SeekBar>
+
+                <TextView
+                    android:id="@+id/tv_lb"
+                    style="@style/leftdialog_tv_right_style"
+                    android:text="50%"
+                   ></TextView>
+
+                <TextView
+                    style="@style/tovos_tv_style"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                    android:text="低电量报警"
+                  ></TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <Switch
+                    android:id="@+id/swith_go_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                </Switch>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="智能低电量返航:"
+                 >
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <!--电池信息 没连接上电池隐藏-->
+            <RelativeLayout
+                android:id="@+id/rl_battery_info"
+                android:layout_width="@dimen/set_item_width"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_info"
+                    style="@style/tovos_rl_style"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/leftdialog_tv_style"
+                        android:text="总电量:"
+                       >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/total_battery"
+                        style="@style/leftdialog_tv_style"
+                        android:layout_marginLeft="11dp"
+                        android:text="71%">
+
+                    </TextView>
+
+                    <TextView
+                        style="@style/leftdialog_tv_style"
+                        android:layout_marginLeft="41dp"
+
+                        android:text="飞行时间:">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/flight_time"
+                        style="@style/leftdialog_tv_style"
+                        android:layout_marginLeft="11dp"
+                        android:text="00:00">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/battery_list"
+                    android:layout_width="@dimen/set_item_width"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_info" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

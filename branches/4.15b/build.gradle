@@ -1,0 +1,26 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.50'
+    ext.maven_url = 'http://localhost:8081/repository/'
+    repositories {
+        maven { url maven_url+'tovos/'}
+
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:4.2.1'
+        //gradle版本高于3.6.2 DJI地图模块无法识别，但是编译能通过
+
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url maven_url+'tovos/'}
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/signal"
+        android:background="@color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/menu_img"
+            android:layout_width="@dimen/action_bar_width"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/action_img_martin_left"
+                android:src="@drawable/camera_controll_exposure_mode_p"
+                android:layout_width="18dp"
+                android:layout_height="16dp">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+<!--        <dji.ux.beta.core.panelwidget.topbar.TopBarPanelWidget-->
+<!--            android:id="@+id/panel_top_bar"-->
+<!--            android:layout_toRightOf="@id/menu_img"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@color/black"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHeight_percent="0.08"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:uxsdk_itemsMarginRight="@dimen/uxsdk_spacing_normal"-->
+<!--            app:uxsdk_itemsSpacing="@dimen/uxsdk_spacing_normal"-->
+<!--            tools:ignore="MissingClass" />-->
+
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_toRightOf="@id/menu_img"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:orientation="horizontal">
+
+            <dji.ux.widget.PreFlightStatusWidget
+                android:layout_width="@dimen/PreFlightStatusWidget_width"
+                android:layout_height="@dimen/PreFlightStatusWidget_height"/>
+
+            <dji.ux.widget.FlightModeWidget
+                android:layout_width="@dimen/FlightModeWidget_width"
+                android:layout_height="@dimen/FlightModeWidget_height"/>
+
+            <dji.ux.widget.GPSSignalWidget
+                android:id="@+id/gpsSignalWidget"
+                android:layout_width="@dimen/GPSSignalWidget_width"
+                android:layout_height="@dimen/GPSSignalWidget_height"/>
+
+            <dji.ux.beta.core.widget.vision.VisionWidget
+                android:id="@+id/visionWidget"
+                android:layout_width="@dimen/VisionWidget_width"
+                android:layout_height="@dimen/VisionWidget_height"/>
+
+            <dji.ux.widget.RemoteControlSignalWidget
+                android:layout_width="@dimen/RemoteControlSignalWidget_width"
+                android:layout_height="@dimen/RemoteControlSignalWidget_height"/>
+
+            <dji.ux.widget.VideoSignalWidget
+                android:layout_width="@dimen/VideoSignalWidget_width"
+                android:layout_height="@dimen/VideoSignalWidget_height"/>
+
+            <dji.ux.widget.BatteryWidget
+                android:layout_width="@dimen/BatteryWidget_width"
+                android:layout_height="@dimen/BatteryWidget_height"
+                custom:excludeView="singleVoltage"/>
+
+            <dji.ux.widget.ConnectionWidget
+                android:layout_width="@dimen/ConnectionWidget_width"
+                android:layout_height="@dimen/ConnectionWidget_height"/>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

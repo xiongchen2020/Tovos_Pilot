@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/set_vission"
+    style="@style/tovos_ll_style">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_title_height"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/vission_rl"
+            android:layout_width="@dimen/set_title_height"
+            android:layout_height="@dimen/set_title_height">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/back" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+           style="@style/tovos_tv_style"
+            android:layout_centerInParent="true"
+            android:text="传感器设置"
+          />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/s_bz_layout"></include>
+
+            <include layout="@layout/round_bz_layout"></include>
+
+            <RelativeLayout
+                android:id="@+id/vission_rl_bc"
+                style="@style/tovos_rl_style"
+                tools:ignore="DuplicateIds">
+
+                <Switch
+                    android:id="@+id/swith_avoidance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                </Switch>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="启用视觉避障系统:"
+                  >
+
+                </TextView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_show_radar"
+                style="@style/tovos_rl_style">
+
+                <Switch
+                    android:id="@+id/swith_radar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                </Switch>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="显示雷达图:"
+                   >
+
+                </TextView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <Switch
+                    android:id="@+id/swith_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                </Switch>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="启用下视视觉定位:"
+                  >
+
+                </TextView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <Switch
+                    android:id="@+id/swith_rth_avoidance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                </Switch>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="返航障碍物检测:"
+                   >
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/tovos_rl_style"
+                android:layout_marginBottom="@dimen/set_item_space_small"
+               >
+
+                <Switch
+                    android:id="@+id/swith_precision_landing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                </Switch>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="精准降落:"
+                >
+
+                </TextView>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

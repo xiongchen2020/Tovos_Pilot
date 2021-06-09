@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/tovos_ll_style"
+    android:id="@+id/tower_layout"
+    android:visibility="gone"
+  >
+
+    <RelativeLayout
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_title_height">
+
+        <ImageView
+            android:id="@+id/route_back"
+            android:layout_marginLeft="14dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:id="@+id/route_name"
+            style="@style/tovos_tv_style"
+            android:layout_centerInParent="true"
+            android:text="任务详情"
+
+            />
+
+    </RelativeLayout>
+
+    <include layout="@layout/tower_item_layout"
+        tools:ignore="ResourceCycle">
+
+    </include>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/towerlist"
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/task_list_layout_height">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="@dimen/set_item_space_small"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_item_height"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/save_route"
+            android:background="@drawable/selected_set_item_shape"
+            android:layout_marginBottom="@dimen/set_item_space_small"
+            android:layout_width="@dimen/flight_button_width"
+            android:layout_height="@dimen/set_item_height"
+            android:layout_weight="1">
+
+            <TextView
+                android:textColor="#6DB5FF"
+               style="@style/tovos_tv_style"
+                android:layout_centerInParent="true"
+                android:text="另存"
+            />
+
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/select_point"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/selected_set_item_shape"
+            android:layout_width="@dimen/flight_button_width"
+            android:layout_height="@dimen/set_item_height"
+            android:layout_weight="1">
+
+            <TextView
+                android:textColor="#6DB5FF"
+                style="@style/tovos_tv_style"
+                android:layout_centerInParent="true"
+                android:text="选择起飞点加载"
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/load_in"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/selected_set_item_shape"
+            android:layout_width="@dimen/flight_button_width"
+            android:layout_height="@dimen/set_item_height"
+            android:layout_weight="1">
+
+            <TextView
+                android:textColor="#6DB5FF"
+                style="@style/tovos_tv_style"
+                android:layout_centerInParent="true"
+                android:text="加载"
+              />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+

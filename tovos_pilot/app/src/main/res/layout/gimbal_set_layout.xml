@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/tovos_ll_style">
+
+    <RelativeLayout
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_title_height">
+
+        <RelativeLayout
+            android:id="@+id/gimbal_rl"
+            android:layout_width="@dimen/set_title_height"
+            android:layout_height="@dimen/set_title_height">
+
+            <ImageView
+                android:layout_marginLeft="14dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/back"
+                />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_centerInParent="true"
+            style="@style/tovos_tv_style"
+            android:text="云台设置"
+
+            />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <RadioGroup
+                    android:id="@+id/gimbal_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="11dp"
+                    android:background="@color/transparent"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+
+                </RadioGroup>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="云台:" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <Switch
+                    android:id="@+id/swith_extension"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                </Switch>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="云台俯仰限位扩展:">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <RadioGroup
+                    android:id="@+id/rg_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="11dp"
+                    android:background="@color/transparent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/mode_rb1"
+                        style="@style/tovos_rb_style"
+                        android:checked="true"
+                        android:text="自由"
+                       >
+
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/mode_rb2"
+                        style="@style/tovos_rb_style"
+                        android:text="跟随"
+                        />
+
+
+                    <RadioButton
+                        android:id="@+id/mode_rb3"
+                        android:text="FPV"
+                        style="@style/tovos_rb_style"/>
+
+
+                </RadioGroup>
+
+                <TextView
+                    style="@style/leftdialog_tv_style"
+                    android:text="云台模式:">
+
+                </TextView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_pitch"
+                android:layout_height="wrap_content"
+                style="@style/tovos_rl_style">
+
+                <SeekBar
+                    android:id="@+id/sb_pitch"
+                    android:layout_marginBottom="@dimen/set_item_space_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/seekbar_martin_top"
+                    android:max="30"
+                    android:progress="0">
+
+                </SeekBar>
+
+                <TextView
+                    android:id="@+id/tv_pitch"
+                    style="@style/leftdialog_tv_right_style"
+                    android:text="0"></TextView>
+
+                <TextView
+                   style="@style/tovos_tv_style"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                    android:text="云台俯仰缓启/停"
+                  ></TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_pitch_speed"
+                android:layout_height="wrap_content"
+                style="@style/tovos_rl_style">
+
+                <SeekBar
+                    android:id="@+id/sb_pitch_speed"
+                    android:layout_marginBottom="@dimen/set_item_space_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/seekbar_martin_top"
+                    android:max="100"
+                    android:progress="50">
+
+                </SeekBar>
+
+                <TextView
+                    android:id="@+id/tv_pitch_speed"
+                  style="@style/leftdialog_tv_right_style"
+                    android:text="50%"
+                  ></TextView>
+
+                <TextView
+                 style="@style/tovos_tv_style"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                    android:text="云台俯仰轴最大速度"
+                 ></TextView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_yaw"
+                android:layout_height="wrap_content"
+                style="@style/tovos_rl_style">
+
+                <SeekBar
+                    android:id="@+id/sb_yaw"
+                    android:layout_marginBottom="@dimen/set_item_space_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/seekbar_martin_top"
+                    android:max="30"
+                    android:progress="0">
+
+                </SeekBar>
+
+                <TextView
+                    android:id="@+id/tv_yaw"
+                   style="@style/leftdialog_tv_right_style"
+                    android:text="0"
+                  ></TextView>
+
+                <TextView
+                   style="@style/tovos_tv_style"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                    android:text="云台偏航缓启/停"
+                  ></TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_yaw_speed"
+                android:layout_height="wrap_content"
+
+                style="@style/tovos_rl_style">
+
+                <SeekBar
+                    android:id="@+id/sb_yaw_speed"
+                    android:layout_marginBottom="@dimen/set_item_space_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/seekbar_martin_top"
+                    android:max="100"
+                    android:progress="50">
+
+                </SeekBar>
+
+                <TextView
+                    android:id="@+id/tv_yaw_speed"
+                   style="@style/leftdialog_tv_right_style"
+                    android:text="50%"
+                   ></TextView>
+
+                <TextView
+                   style="@style/tovos_tv_style"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="@dimen/seekbar_text_martin_top"
+                    android:text="云台偏航轴最大速度"
+                   ></TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                style="@style/tovos_rl_style">
+
+                <TextView
+                    android:id="@+id/tv_reset"
+                    style="@style/tovos_tv_style"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="11dp"
+                    android:text="云台偏航回中/向下"
+
+                  />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/tovos_rl_style">
+
+                <TextView
+                    android:id="@+id/tv_factory_set"
+                   style="@style/tovos_tv_style"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="11dp"
+                    android:text="重置云台参数"
+                   />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginBottom="@dimen/set_item_space_small"
+                style="@style/tovos_rl_style">
+
+                <TextView
+                    android:id="@+id/tv_calibration"
+                   style="@style/tovos_tv_style"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="11dp"
+                    android:text="云台自动校准"
+                  >
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
